@@ -1,8 +1,93 @@
+
 html, body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/*=========== Google font ===========*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@300;400;500;700&display=swap');
+
+/*=========== Header ===========*/
+header{
+    background-image: url(./images/bgk-header.png);
+    background-size: cover;
+    height: 500px;
+    font-family: "Roboto", sans-serif;
+}
+
+header .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 50px;
+
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 50px;
+
+}
+
+.logo a{
+    color: rgba(0, 255, 255, 0.564);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 100;
+    text-align: left;
+}
+
+.nav-items a{
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-right: 8px;
+}
+
+.heading h1{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.caption{
+    max-width: 800px;
+    margin: 0 100px 0 100px;
+}
+
+.caption p{
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.button button{
+    background-color: transparent;
+    border: 1px solid cyan;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: cyan;
+    padding: 8px;
+    font-size: 0.7rem;
+    font-weight: 100;
+    border-radius: 2px;
+}
 h2 {
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
