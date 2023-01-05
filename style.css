@@ -1,6 +1,10 @@
 html, body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+a {
+    text-decoration: none;
 }
 
 /*=========== Google font ===========*/
@@ -57,7 +61,7 @@ header .logo{
 
 .caption{
     max-width: 800px;
-    margin: 0 100px 0 100px;
+    margin: 0 auto;
 }
 
 .caption p{
@@ -75,12 +79,12 @@ header .logo{
     margin: 20px;
 }
 
-.button button{
+header button, main button {
     background-color: transparent;
-    border: 1px solid cyan;
+    border: 1px solid #68dacd;
     cursor: pointer;
     text-transform: uppercase;
-    color: cyan;
+    color: #68dacd;
     padding: 8px;
     font-size: 0.7rem;
     font-weight: 100;
@@ -89,6 +93,7 @@ header .logo{
 h2 {
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
+    color: #403e4b;
 }
 
 #ourstory {
@@ -114,6 +119,60 @@ h3.watchstory {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     text-transform: uppercase;
+}
+#expertise {
+    margin: 30px 0;
+    text-align: center;
+}
+#expertise h2 {
+    color: #403e4b;
+}
+#expertise p {
+    color: #636268;
+}
+#expertise hr {
+    width: 50px;
+    border: 1px solid #c5c4c9;
+}
+.grid-container {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 0;
+    margin: 0 auto;
+}
+.grid-item {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: .9em;
+}
+a .grid-item {
+    color: #403e4b;
+    text-decoration: none;
+}
+a:hover .grid-item, a:active .grid-item {
+    text-shadow: 1px 1px 2px #aaa;
+}
+a:hover .grid-item img, a:active .grid-item img {
+    filter: drop-shadow(1px 1px 2px #aaa);
+}
+.grid-item h4 {
+    text-transform: uppercase;
+    font-size: .9em;
+    margin-bottom: .5em;
+}
+.grid-center {
+    text-align: center;
+    margin: 0;
 }
 
 footer {
