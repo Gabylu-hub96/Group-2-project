@@ -1,3 +1,7 @@
+/* *, *::before, *::after {
+    box-sizing: border-box;
+} */
+
 html, body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -22,7 +26,7 @@ header .nav-bar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 50px;
+    margin: auto;
 
 }
 
@@ -47,16 +51,28 @@ header .logo{
     font-size: 1em;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-right: 8px;
+    font-size: .8em;
+    font-weight: bold;
+    margin-left: 1.5em;
+    transition: .3s;
+}
+.nav-items a:hover, .nav-items a:active {
+    text-shadow: 1px 1px 2px #fff;
+    transition: .3s;
 }
 
 .heading h1{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     text-align: center;
     margin-top: 80px;
+}
+
+header hr {
+    width: 50px;
+    border-top: 1px solid #68dacd;
+    border-bottom: 0;
 }
 
 .caption{
@@ -67,9 +83,10 @@ header .logo{
 .caption p{
     color: #fff;
     text-align: center;
-    font-size: 0.8rem;
-    font-weight: 300;
+    font-size: .9rem;
+    font-weight: 200;
     letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 .button{
@@ -78,7 +95,10 @@ header .logo{
     align-items: center;
     margin: 20px;
 }
-
+.pagewidth {
+    max-width: 960px;
+    margin: auto;
+}
 header button, main button {
     background-color: transparent;
     border: 1px solid #68dacd;
@@ -86,22 +106,34 @@ header button, main button {
     text-transform: uppercase;
     color: #68dacd;
     padding: 8px;
-    font-size: 0.7rem;
-    font-weight: 100;
-    border-radius: 2px;
+    font-size: .8em;
+    font-weight: bold;
+    border-radius: 3px;
+    transition: .5s;
 }
-h2 {
+header button:hover, main button:hover, header button:active, main button:active {
+    box-shadow: 1px 1px 2px #aaa;
+    text-shadow: 1px 1px 2px #aaa;
+    transition: .5s;
+}
+h1, h2 {
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     color: #403e4b;
 }
+h1 {
+    font-size: 3em;
+}
 
 #ourstory {
-    max-width: 800px;
     margin: 50px auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#ourstory p {
+    color: #706f78;
+    font-size: .9em;
 }
 .storycol-2 {
     padding: 2em;
@@ -110,10 +142,21 @@ h2 {
 #storyvideo {
     height: 550px;
     background-image: url("images/bgk-middle.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: .5s;
+}
+a:hover #storyvideo img, a:active #storyvideo img {
+    filter: drop-shadow(2px 2px 2px #fff);
+    transition: .5s;
+}
+a:hover #storyvideo, a:active #storyvideo {
+    text-shadow: 1px 1px 2px #fff;
+    transition: .5s;
 }
 h3.watchstory {
     font-family: Arial, Helvetica, sans-serif;
@@ -121,7 +164,7 @@ h3.watchstory {
     text-transform: uppercase;
 }
 #expertise {
-    margin: 30px 0;
+    margin: 50px 0;
     text-align: center;
 }
 #expertise h2 {
@@ -158,12 +201,15 @@ h3.watchstory {
 a .grid-item {
     color: #403e4b;
     text-decoration: none;
+    transition: .5s;
 }
 a:hover .grid-item, a:active .grid-item {
     text-shadow: 1px 1px 2px #aaa;
+    transition: .5s;
 }
 a:hover .grid-item img, a:active .grid-item img {
     filter: drop-shadow(1px 1px 2px #aaa);
+    transition: .5s;
 }
 .grid-item h4 {
     text-transform: uppercase;
@@ -178,9 +224,12 @@ a:hover .grid-item img, a:active .grid-item img {
 footer {
     width: 100%;
     background-image:url(./images/bgk-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: small;
+    padding: 50px 0;
 }
 .parent {
     display: grid;
@@ -188,8 +237,7 @@ footer {
     grid-template-rows: 1fr 3fr;
     grid-column-gap: 25px;
     grid-row-gap: 0px;
-    padding-left: 10%;
-    padding-right: 10%;
+    margin: 0 auto;
 }
 
 .lower-footer {
@@ -198,8 +246,6 @@ footer {
     grid-template-rows: 1fr;
     grid-column-gap: 60px;
     grid-row-gap: 0px;
-    padding-left: 10%;
-    padding-right: 9%;
 }
     
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -221,14 +267,16 @@ footer {
     text-decoration: none;
     margin: 5px 2px;
     border-radius: 50%;
+    transition: .3s;
 }
 
 .social-links {
     margin-top: 10px;
 }
     
-.social-button:hover {
+.social-button:hover, .social-button:active {
     opacity: 0.7;
+    transition: .3s;
 }
 
 .lower-footer-link {
@@ -237,15 +285,21 @@ footer {
   text-decoration: none;
   margin: 10px;
 }
-
+.newsletter-signup {
+    height: 40px;
+    display: flex;
+}
 .email-input-label {
     position: relative;
     border: 1px white;
 }
 input[type="text"]{
-    width: 140px;
+    width: 150px;
     height: 40px;
     padding: 0 16px;
+    border: 1px solid #9b99ae;
+    color: #9b99ae;
+    font-size: 1.1em;
 }
 
 #femail {
@@ -254,7 +308,15 @@ input[type="text"]{
 }
 
 .send-email-button {
+    height: 40px;
     opacity: 0.7;
     width: 60px;
+    margin-left: 1em;
     padding: 2px 5px 2px 5px;
+    border: 0;
+}
+
+footer a:hover, footer a:active {
+    text-shadow: 1px 1px 2px #fff;
+    transition: .3s;
 }
