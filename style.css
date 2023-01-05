@@ -116,6 +116,43 @@ h3.watchstory {
     text-transform: uppercase;
 }
 
+/*===========Good news and Clients section by Gaby============= */
+
+.newsclients-parent-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+}
+        
+.newsclients-item1 { grid-area: 1 / 1 / 2 / 2; }
+.newsclients-item2 { grid-area: 1 / 2 / 2 / 3; }
+
+.goodnewsh2, .happyclientsh2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 4fr;
+    grid-template-rows: repeat(3, 1fr) 5fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+}
+
+.good-news-input {
+    
+}
+
+#f-name { grid-area: 1 / 2 / 2 / 4; }
+#f-email { grid-area: 2 / 2 / 3 / 4; }
+#f-subject { grid-area: 3 / 2 / 4 / 4; }
+#f-message { grid-area: 4 / 2 / 5 / 4; }
+#good-news-submit-container { grid-area: 5 / 2 / 6 / 3; }
+
 footer {
     width: 100%;
     background-image:url(./images/bgk-footer.png);
@@ -184,8 +221,7 @@ footer {
     border: 1px white;
 }
 input[type="text"]{
-    width: 140px;
-    height: 40px;
+    min-height: 40px;
     padding: 0 16px;
 }
 
