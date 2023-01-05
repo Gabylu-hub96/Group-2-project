@@ -31,7 +31,7 @@ header .logo{
 }
 
 .logo a{
-    color: rgba(0, 255, 255, 0.564);
+    color: #68dacd;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 100;
@@ -57,7 +57,7 @@ header .logo{
 
 .caption{
     max-width: 800px;
-    margin: 0 100px 0 100px;
+    margin: auto;
 }
 
 .caption p{
@@ -75,9 +75,9 @@ header .logo{
     margin: 20px;
 }
 
-.button button{
+button{
     background-color: transparent;
-    border: 1px solid cyan;
+    border: 1px solid #68dacd;
     cursor: pointer;
     text-transform: uppercase;
     color: cyan;
